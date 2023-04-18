@@ -63,7 +63,7 @@
 <hr>
 
 
-<table class="table">
+<table class="table mx-5 mt-5">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -80,6 +80,15 @@
 
         foreach ($hotels as $hotel) {
 
+            if($hotel['parking'] == true){
+                $hotel['parking'] = 'true';
+            } else {
+                $hotel['parking'] = 'false';
+            }
+
+            
+
+
         ?>
         
         <tr>
@@ -88,6 +97,8 @@
             <?php 
 
             foreach ($hotel as $info => $value){
+
+                
 
             ?>
 
